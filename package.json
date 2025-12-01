@@ -1,0 +1,48 @@
+{
+  "name": "bookkeeper",
+  "version": "0.0.0-alpha.0",
+  "description": "A simple and easy to use logging utility.",
+  "homepage": "https://github.com/natsie/bookkeeperreadme",
+  "author": "Oghenevwegba Obire",
+  "license": "MIT",
+  "keywords": [
+    "bookkeeper",
+    "logging",
+    "logs",
+    "development"
+  ],
+  "type": "module",
+  "main": "dist/bookkeeper.mjs",
+  "scripts": {
+    "build": "bun run scripts/build.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "^1.3.3",
+    "prettier": "^3.7.3",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/bookkeeper.d.ts",
+      "require": "./dist/node/cjs/bookkeeper.cjs",
+      "default": "./dist/node/esm/bookkeeper.mjs"
+    },
+    "./node": {
+      "types": "./dist/types/node.d.ts",
+      "require": "./dist/node/cjs/node.cjs",
+      "default": "./dist/node/esm/node.mjs"
+    },
+    "./browser": {
+      "types": "./dist/types/browser.d.ts",
+      "default": "./dist/browser/esm/browser.mjs"
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/natsie/bookkeeper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natsie/bookkeeper.git"
+  }
+}
